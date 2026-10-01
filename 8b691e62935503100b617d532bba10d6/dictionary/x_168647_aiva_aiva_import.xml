@@ -1,34 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element attributes="enforce_dot_walk_cross_scope_access=true" db_object_id="a93c30c693bd87500b617d532bba10a3" extends="sys_import_set_row" label="AIVA Imports" max_length="40" name="x_168647_aiva_aiva_import" type="collection">
-        <element attributes="edge_encryption_enabled=true,import_attribute_name=fte_reduction" label="fte_reduction" max_length="20000" name="u_fte_reduction" type="string"/>
-        <element attributes="edge_encryption_enabled=true,import_attribute_name=urgency" label="urgency" max_length="20000" name="u_urgency" type="string"/>
-        <element attributes="edge_encryption_enabled=true,import_attribute_name=state" label="state" max_length="20000" name="u_state" type="string"/>
         <element attributes="edge_encryption_enabled=true,import_attribute_name=workforce_impact" label="workforce_impact" max_length="20000" name="u_workforce_impact" type="string"/>
-        <element attributes="edge_encryption_enabled=true,import_attribute_name=contains_pii" label="contains_pii" max_length="20000" name="u_contains_pii" type="string"/>
-        <element attributes="edge_encryption_enabled=true,import_attribute_name=data_structure" label="data_structure" max_length="20000" name="u_data_structure" type="string"/>
-        <element attributes="edge_encryption_enabled=true,import_attribute_name=decision_logic" label="decision_logic" max_length="20000" name="u_decision_logic" type="string"/>
         <element attributes="edge_encryption_enabled=true,import_attribute_name=monthly_run_cost" label="monthly_run_cost" max_length="20000" name="u_monthly_run_cost" type="string"/>
-        <element attributes="edge_encryption_enabled=true,import_attribute_name=process_objective" label="process_objective" max_length="20000" name="u_process_objective" type="string"/>
-        <element attributes="edge_encryption_enabled=true,import_attribute_name=pain_points" label="pain_points" max_length="20000" name="u_pain_points" type="string"/>
-        <element attributes="edge_encryption_enabled=true,import_attribute_name=effort_minutes" label="effort_minutes" max_length="20000" name="u_effort_minutes" type="string"/>
-        <element attributes="edge_encryption_enabled=true,import_attribute_name=current_annual_cost" label="current_annual_cost" max_length="20000" name="u_current_annual_cost" type="string"/>
         <element attributes="edge_encryption_enabled=true,import_attribute_name=expected_resolution_rate" label="expected_resolution_rate" max_length="20000" name="u_expected_resolution_rate" type="string"/>
-        <element attributes="edge_encryption_enabled=true,import_attribute_name=expected_ai_assistance" label="expected_ai_assistance" max_length="20000" name="u_expected_ai_assistance" type="string"/>
-        <element attributes="edge_encryption_enabled=true,import_attribute_name=ai_pre_assessment" label="ai_pre_assessment" max_length="20000" name="u_ai_pre_assessment" type="string"/>
-        <element attributes="edge_encryption_enabled=true,import_attribute_name=ai_rationale" label="ai_rationale" max_length="20000" name="u_ai_rationale" type="string"/>
-        <element attributes="edge_encryption_enabled=true,import_attribute_name=year_one_net_roi" label="year_one_net_roi" max_length="20000" name="u_year_one_net_roi" type="string"/>
-        <element attributes="edge_encryption_enabled=true,import_attribute_name=priority" label="priority" max_length="20000" name="u_priority" type="string"/>
-        <element attributes="edge_encryption_enabled=true,import_attribute_name=ai_suitability_score" label="ai_suitability_score" max_length="20000" name="u_ai_suitability_score" type="string"/>
-        <element attributes="edge_encryption_enabled=true,import_attribute_name=success_rate" label="success_rate" max_length="20000" name="u_success_rate" type="string"/>
-        <element attributes="edge_encryption_enabled=true,import_attribute_name=reallocation_strategy" label="reallocation_strategy" max_length="20000" name="u_reallocation_strategy" type="string"/>
-        <element attributes="edge_encryption_enabled=true,import_attribute_name=risk_impact" label="risk_impact" max_length="20000" name="u_risk_impact" type="string"/>
-        <element attributes="edge_encryption_enabled=true,import_attribute_name=human_judgement_level" label="human_judgement_level" max_length="20000" name="u_human_judgement_level" type="string"/>
-        <element attributes="edge_encryption_enabled=true,import_attribute_name=description" label="description" max_length="20000" name="u_description" type="string"/>
-        <element attributes="edge_encryption_enabled=true,import_attribute_name=current_fulfillment" label="current_fulfillment" max_length="20000" name="u_current_fulfillment" type="string"/>
         <element attributes="edge_encryption_enabled=true,import_attribute_name=impact" label="impact" max_length="20000" name="u_impact" type="string"/>
-        <element attributes="edge_encryption_enabled=true,import_attribute_name=build_effort" label="build_effort" max_length="20000" name="u_build_effort" type="string"/>
-        <element attributes="edge_encryption_enabled=true,import_attribute_name=hourly_cost" label="hourly_cost" max_length="20000" name="u_hourly_cost" type="string"/>
-        <element attributes="edge_encryption_enabled=true,import_attribute_name=short_description" label="short_description" max_length="20000" name="u_short_description" type="string"/>
         <element attributes="edge_encryption_enabled=true,import_attribute_name=annual_volume" label="annual_volume" max_length="20000" name="u_annual_volume" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=priority" label="priority" max_length="20000" name="u_priority" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=risk_impact" label="risk_impact" max_length="20000" name="u_risk_impact" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=contains_pii" label="contains_pii" max_length="20000" name="u_contains_pii" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=process_objective" label="process_objective" max_length="20000" name="u_process_objective" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=expected_ai_assistance" label="expected_ai_assistance" max_length="20000" name="u_expected_ai_assistance" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=human_judgement_level" label="human_judgement_level" max_length="20000" name="u_human_judgement_level" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=build_effort" label="build_effort" max_length="20000" name="u_build_effort" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=ai_suitability_score" label="ai_suitability_score" max_length="20000" name="u_ai_suitability_score" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=fte_reduction" label="fte_reduction" max_length="20000" name="u_fte_reduction" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=pain_points" label="pain_points" max_length="20000" name="u_pain_points" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=urgency" label="urgency" max_length="20000" name="u_urgency" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=data_structure" label="data_structure" max_length="20000" name="u_data_structure" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=ai_pre_assessment" label="ai_pre_assessment" max_length="20000" name="u_ai_pre_assessment" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=success_rate" label="success_rate" max_length="20000" name="u_success_rate" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=description" label="description" max_length="20000" name="u_description" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=hourly_cost" label="hourly_cost" max_length="20000" name="u_hourly_cost" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=decision_logic" label="decision_logic" max_length="20000" name="u_decision_logic" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=current_annual_cost" label="current_annual_cost" max_length="20000" name="u_current_annual_cost" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=effort_minutes" label="effort_minutes" max_length="20000" name="u_effort_minutes" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=state" label="state" max_length="20000" name="u_state" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=year_one_net_roi" label="year_one_net_roi" max_length="20000" name="u_year_one_net_roi" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=ai_rationale" label="ai_rationale" max_length="20000" name="u_ai_rationale" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=reallocation_strategy" label="reallocation_strategy" max_length="20000" name="u_reallocation_strategy" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=current_fulfillment" label="current_fulfillment" max_length="20000" name="u_current_fulfillment" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=short_description" label="short_description" max_length="20000" name="u_short_description" type="string"/>
     </element>
 </database>

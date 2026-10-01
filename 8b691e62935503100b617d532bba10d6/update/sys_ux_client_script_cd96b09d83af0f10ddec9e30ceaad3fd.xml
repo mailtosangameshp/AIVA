@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_client_script">
+    <sys_ux_client_script action="INSERT_OR_UPDATE">
+        <controller_preset/>
+        <includes/>
+        <macroponent display_value="Record Default">fa397b49d2d941d7988ae201dc6db5a5</macroponent>
+        <name>iframe_1/src</name>
+        <preset/>
+        <required_translations>[]</required_translations>
+        <script><![CDATA[/**
+  * @param {params} params
+  * @param {api} params.api
+  * @param {TransformApiHelpers} params.helpers
+  */
+function evaluateProperty({api}) {
+  //api.data.record?.form?.fields?.year_one_net_roi?.value
+    var sysId = api.data.record.sysId; // Update this path to your actual data source
+
+    // Encode the HTML so it safely passes through the URL
+    return '/x_168647_aiva_curr_ark.do?sysparm_sys_id=' + sysId;
+    
+}]]></script>
+        <script_api_version>2.0.0</script_api_version>
+        <sys_class_name>sys_ux_client_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-24 14:12:56</sys_created_on>
+        <sys_id>cd96b09d83af0f10ddec9e30ceaad3fd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>iframe_1/src</sys_name>
+        <sys_package display_value="AIVA" source="x_168647_aiva">8b691e62935503100b617d532bba10d6</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AIVA">8b691e62935503100b617d532bba10d6</sys_scope>
+        <sys_update_name>sys_ux_client_script_cd96b09d83af0f10ddec9e30ceaad3fd</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-24 14:12:56</sys_updated_on>
+        <target>macroponent</target>
+        <type>transform</type>
+    </sys_ux_client_script>
+</record_update>

@@ -1,84 +1,128 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element audit="true" db_object_id="d6ae8b51e6b045deb421b0f523b7a623" extends="task" label="Aiva Request" max_length="40" name="x_168647_aiva_request" type="collection">
-        <element choice="1" label="Business Impact of Error" max_length="40" name="risk_impact" type="choice">
+        <element attributes="html_sanitize=false" label="Proposed Architecture" max_length="8000" name="proposed_architecture" type="html"/>
+        <element label="What is the first time success rate of the task (%)" max_length="40" name="success_rate" type="integer"/>
+        <element label="Build Effort (£)" max_length="40" name="build_effort" type="currency"/>
+        <element choice="1" label="Data Structure" max_length="40" name="data_structure" type="choice">
             <choice>
-                <element inactive_on_update="false" label="Critical" sequence="4" value="critical"/>
-                <element inactive_on_update="false" label="Low" sequence="1" value="low"/>
-                <element inactive_on_update="false" label="High" sequence="3" value="high"/>
-                <element inactive_on_update="false" label="Medium" sequence="2" value="medium"/>
+                <element inactive_on_update="false" label="Strictly Structured" sequence="1" value="strictly_structured"/>
+                <element inactive_on_update="false" label="Unstructured" sequence="3" value="unstructured"/>
+                <element inactive_on_update="false" label="Mixed" sequence="2" value="mixed"/>
             </choice>
         </element>
+        <element choice="1" label="Final Decision" max_length="40" name="final_decision" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Not for AI Automation" value="no_go"/>
+                <element inactive_on_update="false" label="Go for AI Automation" value="go_ai"/>
+                <element inactive_on_update="false" label="Go for Legacy Automation" value="go_legacy"/>
+            </choice>
+        </element>
+        <element label="FTE Reduction" max_length="40" name="fte_reduction" type="integer"/>
+        <element label="What is the high-level objective of this process?" max_length="4000" name="process_objective" type="string"/>
+        <element label="AI Suitability Score" max_length="40" name="ai_suitability_score" read_only="true" read_only_option="instance_configured" type="integer"/>
+        <element label="Architect Notes / Findings" max_length="4000" name="architect_notes" type="string"/>
+        <element label="Current Annual Cost" max_length="40" name="current_annual_cost" read_only="true" read_only_option="instance_configured" type="currency"/>
+        <element label="How is it currently fulfilled manually?" max_length="4000" name="current_fulfillment" type="string"/>
         <element choice="1" label="How much human judgement is currently required in this process?" max_length="40" name="human_judgement_level" type="choice">
             <choice>
-                <element inactive_on_update="false" label="Some judgement" sequence="2" value="some_judgement"/>
-                <element inactive_on_update="false" label="Expert-only judgement" sequence="4" value="expert_only_judgement"/>
                 <element inactive_on_update="false" label="Significant judgement" sequence="3" value="significant_judgement"/>
                 <element inactive_on_update="false" label="Very little" sequence="1" value="very_little"/>
+                <element inactive_on_update="false" label="Expert-only judgement" sequence="4" value="expert_only_judgement"/>
+                <element inactive_on_update="false" label="Some judgement" sequence="2" value="some_judgement"/>
+            </choice>
+        </element>
+        <element label="Expected Automation Resolution Rate (%)" max_length="40" name="expected_resolution_rate" type="integer"/>
+        <element choice="1" label="Final Quadrant Decision" max_length="40" name="final_quadrant_decision" read_only="true" read_only_option="instance_configured" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Legacy Auto" value="4"/>
+                <element inactive_on_update="false" label="Reject" value="3"/>
+                <element inactive_on_update="false" label="R&amp;D Low Value" value="2"/>
+                <element inactive_on_update="false" label="AI Sweet Spot" value="1"/>
+            </choice>
+        </element>
+        <element choice="1" label="Business Impact of Error" max_length="40" name="risk_impact" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="High" sequence="3" value="high"/>
+                <element inactive_on_update="false" label="Medium" sequence="2" value="medium"/>
+                <element inactive_on_update="false" label="Low" sequence="1" value="low"/>
+                <element inactive_on_update="false" label="Critical" sequence="4" value="critical"/>
+            </choice>
+        </element>
+        <element label="What are the main pain points or bottlenecks?" max_length="4000" name="pain_points" type="string"/>
+        <element label="Year One Net ROI" max_length="40" name="year_one_net_roi" read_only="true" read_only_option="instance_configured" type="currency"/>
+        <element label="Why do you believe AI is the right approach for this need?" max_length="4000" name="ai_rationale" type="string"/>
+        <element label="How many tasks are completed annually?" max_length="40" name="annual_volume" type="integer"/>
+        <element label="How much effort is required to complete this work (minutes)?" max_length="40" name="effort_minutes" type="integer"/>
+        <element attributes="html_sanitize=false" label="Current Architecture" max_length="8000" name="current_architecture" type="html"/>
+        <element label="What is the average resource cost per hour? (£)" max_length="40" name="hourly_cost" type="currency"/>
+        <element label="Monthly Run Cost (£)" max_length="40" name="monthly_run_cost" type="currency"/>
+        <element choice="1" label="What would you expect the AI solution to help with?" max_length="40" name="expected_ai_assistance" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Extract amount, date, and vendor from images." sequence="0" value="Extract amount, date, and vendor from images."/>
+                <element inactive_on_update="false" label="Extract address from email and update SAP via API." sequence="0" value="Extract address from email and update SAP via API."/>
+                <element inactive_on_update="false" label="Highlight risky clauses and suggest approved language." sequence="0" value="Highlight risky clauses and suggest approved language."/>
+                <element inactive_on_update="false" label="Digest daily logs and highlight severe reactions." sequence="0" value="Digest daily logs and highlight severe reactions."/>
+                <element inactive_on_update="false" label="Detect language, translate contextually, and reply." sequence="0" value="Detect language, translate contextually, and reply."/>
+                <element inactive_on_update="false" label="Generate 50 headline options based on core product value." sequence="0" value="Generate 50 headline options based on core product value."/>
+                <element inactive_on_update="false" label="Transcribe audio and extract tasks/owner" sequence="0" value="Transcribe audio and extract tasks/owner"/>
+                <element inactive_on_update="false" label="Predicting outcomes or trends" sequence="6" value="predicting_outcomes_or_trends"/>
+                <element inactive_on_update="false" label="Search knowledge base and draft customiz" sequence="0" value="Search knowledge base and draft customiz"/>
+                <element inactive_on_update="false" label="Translate syntax and suggest modern arch" sequence="0" value="Translate syntax and suggest modern arch"/>
+                <element inactive_on_update="false" label="Answering questions" sequence="8" value="answering_questions"/>
+                <element inactive_on_update="false" label="Auto-populate PPT templates from SQL que" sequence="0" value="Auto-populate PPT templates from SQL que"/>
+                <element inactive_on_update="false" label="Analyze text for phishing markers and su" sequence="0" value="Analyze text for phishing markers and su"/>
+                <element inactive_on_update="false" label="Automate the deployment of patches." sequence="0" value="Automate the deployment of patches."/>
+                <element inactive_on_update="false" label="Scrape news, CRM data, and financials in" sequence="0" value="Scrape news, CRM data, and financials in"/>
+                <element inactive_on_update="false" label="Score sentiment and summarize trending t" sequence="0" value="Score sentiment and summarize trending t"/>
+                <element inactive_on_update="false" label="Categorize tickets and suggest initial troubleshooting steps." sequence="0" value="Categorize tickets and suggest initial troubleshooting steps."/>
+                <element inactive_on_update="false" label="Read IoT sensor data and log it." sequence="0" value="Read IoT sensor data and log it."/>
+                <element inactive_on_update="false" label="Translate syntax and suggest modern architectural patterns." sequence="0" value="Translate syntax and suggest modern architectural patterns."/>
+                <element inactive_on_update="false" label="Searching for relevant information" sequence="2" value="searching_for_relevant_information"/>
+                <element inactive_on_update="false" label="Verify identity via chat and trigger AD script." sequence="0" value="Verify identity via chat and trigger AD script."/>
+                <element inactive_on_update="false" label="Trigger emails automatically upon workday creation." sequence="0" value="Trigger emails automatically upon workday creation."/>
+                <element inactive_on_update="false" label="Trigger badge deactivation directly from Workday termination event." sequence="0" value="Trigger badge deactivation directly from Workday termination event."/>
+                <element inactive_on_update="false" label="Classifying or categorising items" sequence="4" value="classifying_or_categorising_items"/>
+                <element inactive_on_update="false" label="Routing or prioritising work" sequence="9" value="routing_or_prioritising_work"/>
+                <element inactive_on_update="false" label="Automating customer interactions" sequence="11" value="automating_customer_interactions"/>
+                <element inactive_on_update="false" label="Extract amount, date, and vendor from im" sequence="0" value="Extract amount, date, and vendor from im"/>
+                <element inactive_on_update="false" label="Extract address from email and update SA" sequence="0" value="Extract address from email and update SA"/>
+                <element inactive_on_update="false" label="Highlight risky clauses and suggest appr" sequence="0" value="Highlight risky clauses and suggest appr"/>
+                <element inactive_on_update="false" label="Digest daily logs and highlight severe r" sequence="0" value="Digest daily logs and highlight severe r"/>
+                <element inactive_on_update="false" label="Detect language, translate contextually," sequence="0" value="Detect language, translate contextually,"/>
+                <element inactive_on_update="false" label="Generate 50 headline options based on co" sequence="0" value="Generate 50 headline options based on co"/>
+                <element inactive_on_update="false" label="Search knowledge base and draft customized RFP answers." sequence="0" value="Search knowledge base and draft customized RFP answers."/>
+                <element inactive_on_update="false" label="Transcribe audio and extract tasks/owners." sequence="0" value="Transcribe audio and extract tasks/owners."/>
+                <element inactive_on_update="false" label="Other" sequence="12" value="other"/>
+                <element inactive_on_update="false" label="Extracting information from documents" sequence="7" value="extracting_information_from_documents"/>
+                <element inactive_on_update="false" label="Analyze text for phishing markers and summarize threat level." sequence="0" value="Analyze text for phishing markers and summarize threat level."/>
+                <element inactive_on_update="false" label="Categorize tickets and suggest initial t" sequence="0" value="Categorize tickets and suggest initial t"/>
+                <element inactive_on_update="false" label="Auto-populate PPT templates from SQL queries." sequence="0" value="Auto-populate PPT templates from SQL queries."/>
+                <element inactive_on_update="false" label="Scrape logs and alert only on failures." sequence="0" value="Scrape logs and alert only on failures."/>
+                <element inactive_on_update="false" label="Score sentiment and summarize trending topics." sequence="0" value="Score sentiment and summarize trending topics."/>
+                <element inactive_on_update="false" label="Scrape news, CRM data, and financials into a 1-page summary." sequence="0" value="Scrape news, CRM data, and financials into a 1-page summary."/>
+                <element inactive_on_update="false" label="Summarising information" sequence="1" value="summarising_information"/>
+                <element inactive_on_update="false" label="Verify identity via chat and trigger AD " sequence="0" value="Verify identity via chat and trigger AD "/>
+                <element inactive_on_update="false" label="Trigger emails automatically upon workda" sequence="0" value="Trigger emails automatically upon workda"/>
+                <element inactive_on_update="false" label="Recommending next actions" sequence="5" value="recommending_next_actions"/>
+                <element inactive_on_update="false" label="Trigger badge deactivation directly from" sequence="0" value="Trigger badge deactivation directly from"/>
+                <element inactive_on_update="false" label="Drafting content" sequence="3" value="drafting_content"/>
+                <element inactive_on_update="false" label="Assisting employee decisions" sequence="10" value="assisting_employee_decisions"/>
             </choice>
         </element>
         <element choice="1" label="Workforce Impact" max_length="40" name="workforce_impact" type="choice">
             <choice>
-                <element inactive_on_update="false" label="Augmentation" sequence="1" value="augmentation"/>
                 <element inactive_on_update="false" label="Displacement" sequence="2" value="displacement"/>
+                <element inactive_on_update="false" label="Augmentation" sequence="1" value="augmentation"/>
             </choice>
         </element>
-        <element label="Expected Automation Resolution Rate (%)" max_length="40" name="expected_resolution_rate" type="integer"/>
-        <element choice="1" label="What would you expect the AI solution to help with?" max_length="40" name="expected_ai_assistance" type="choice">
+        <element choice="1" label="Reallocation Strategy" max_length="40" name="reallocation_strategy" type="choice">
             <choice>
-                <element inactive_on_update="false" label="Digest daily logs and highlight severe reactions." sequence="0" value="Digest daily logs and highlight severe reactions."/>
-                <element inactive_on_update="false" label="Automate the deployment of patches." sequence="0" value="Automate the deployment of patches."/>
-                <element inactive_on_update="false" label="Translate syntax and suggest modern architectural patterns." sequence="0" value="Translate syntax and suggest modern architectural patterns."/>
-                <element inactive_on_update="false" label="Search knowledge base and draft customized RFP answers." sequence="0" value="Search knowledge base and draft customized RFP answers."/>
-                <element inactive_on_update="false" label="Assisting employee decisions" sequence="10" value="assisting_employee_decisions"/>
-                <element inactive_on_update="false" label="Drafting content" sequence="3" value="drafting_content"/>
-                <element inactive_on_update="false" label="Score sentiment and summarize trending t" sequence="0" value="Score sentiment and summarize trending t"/>
-                <element inactive_on_update="false" label="Read IoT sensor data and log it." sequence="0" value="Read IoT sensor data and log it."/>
-                <element inactive_on_update="false" label="Other" sequence="12" value="other"/>
-                <element inactive_on_update="false" label="Scrape news, CRM data, and financials into a 1-page summary." sequence="0" value="Scrape news, CRM data, and financials into a 1-page summary."/>
-                <element inactive_on_update="false" label="Highlight risky clauses and suggest approved language." sequence="0" value="Highlight risky clauses and suggest approved language."/>
-                <element inactive_on_update="false" label="Categorize tickets and suggest initial t" sequence="0" value="Categorize tickets and suggest initial t"/>
-                <element inactive_on_update="false" label="Transcribe audio and extract tasks/owners." sequence="0" value="Transcribe audio and extract tasks/owners."/>
-                <element inactive_on_update="false" label="Extract amount, date, and vendor from im" sequence="0" value="Extract amount, date, and vendor from im"/>
-                <element inactive_on_update="false" label="Score sentiment and summarize trending topics." sequence="0" value="Score sentiment and summarize trending topics."/>
-                <element inactive_on_update="false" label="Extract amount, date, and vendor from images." sequence="0" value="Extract amount, date, and vendor from images."/>
-                <element inactive_on_update="false" label="Detect language, translate contextually, and reply." sequence="0" value="Detect language, translate contextually, and reply."/>
-                <element inactive_on_update="false" label="Generate 50 headline options based on core product value." sequence="0" value="Generate 50 headline options based on core product value."/>
-                <element inactive_on_update="false" label="Extract address from email and update SAP via API." sequence="0" value="Extract address from email and update SAP via API."/>
-                <element inactive_on_update="false" label="Transcribe audio and extract tasks/owner" sequence="0" value="Transcribe audio and extract tasks/owner"/>
-                <element inactive_on_update="false" label="Automating customer interactions" sequence="11" value="automating_customer_interactions"/>
-                <element inactive_on_update="false" label="Auto-populate PPT templates from SQL que" sequence="0" value="Auto-populate PPT templates from SQL que"/>
-                <element inactive_on_update="false" label="Auto-populate PPT templates from SQL queries." sequence="0" value="Auto-populate PPT templates from SQL queries."/>
-                <element inactive_on_update="false" label="Answering questions" sequence="8" value="answering_questions"/>
-                <element inactive_on_update="false" label="Generate 50 headline options based on co" sequence="0" value="Generate 50 headline options based on co"/>
-                <element inactive_on_update="false" label="Searching for relevant information" sequence="2" value="searching_for_relevant_information"/>
-                <element inactive_on_update="false" label="Highlight risky clauses and suggest appr" sequence="0" value="Highlight risky clauses and suggest appr"/>
-                <element inactive_on_update="false" label="Predicting outcomes or trends" sequence="6" value="predicting_outcomes_or_trends"/>
-                <element inactive_on_update="false" label="Extracting information from documents" sequence="7" value="extracting_information_from_documents"/>
-                <element inactive_on_update="false" label="Analyze text for phishing markers and su" sequence="0" value="Analyze text for phishing markers and su"/>
-                <element inactive_on_update="false" label="Recommending next actions" sequence="5" value="recommending_next_actions"/>
-                <element inactive_on_update="false" label="Analyze text for phishing markers and summarize threat level." sequence="0" value="Analyze text for phishing markers and summarize threat level."/>
-                <element inactive_on_update="false" label="Summarising information" sequence="1" value="summarising_information"/>
-                <element inactive_on_update="false" label="Classifying or categorising items" sequence="4" value="classifying_or_categorising_items"/>
-                <element inactive_on_update="false" label="Categorize tickets and suggest initial troubleshooting steps." sequence="0" value="Categorize tickets and suggest initial troubleshooting steps."/>
-                <element inactive_on_update="false" label="Translate syntax and suggest modern arch" sequence="0" value="Translate syntax and suggest modern arch"/>
-                <element inactive_on_update="false" label="Search knowledge base and draft customiz" sequence="0" value="Search knowledge base and draft customiz"/>
-                <element inactive_on_update="false" label="Trigger emails automatically upon workda" sequence="0" value="Trigger emails automatically upon workda"/>
-                <element inactive_on_update="false" label="Verify identity via chat and trigger AD " sequence="0" value="Verify identity via chat and trigger AD "/>
-                <element inactive_on_update="false" label="Trigger emails automatically upon workday creation." sequence="0" value="Trigger emails automatically upon workday creation."/>
-                <element inactive_on_update="false" label="Verify identity via chat and trigger AD script." sequence="0" value="Verify identity via chat and trigger AD script."/>
-                <element inactive_on_update="false" label="Trigger badge deactivation directly from Workday termination event." sequence="0" value="Trigger badge deactivation directly from Workday termination event."/>
-                <element inactive_on_update="false" label="Scrape logs and alert only on failures." sequence="0" value="Scrape logs and alert only on failures."/>
-                <element inactive_on_update="false" label="Detect language, translate contextually," sequence="0" value="Detect language, translate contextually,"/>
-                <element inactive_on_update="false" label="Extract address from email and update SA" sequence="0" value="Extract address from email and update SA"/>
-                <element inactive_on_update="false" label="Trigger badge deactivation directly from" sequence="0" value="Trigger badge deactivation directly from"/>
-                <element inactive_on_update="false" label="Routing or prioritising work" sequence="9" value="routing_or_prioritising_work"/>
-                <element inactive_on_update="false" label="Digest daily logs and highlight severe r" sequence="0" value="Digest daily logs and highlight severe r"/>
-                <element inactive_on_update="false" label="Scrape news, CRM data, and financials in" sequence="0" value="Scrape news, CRM data, and financials in"/>
+                <element inactive_on_update="false" label="Reskilling" sequence="2" value="reskilling"/>
+                <element inactive_on_update="false" label="Immediate Reallocation" sequence="1" value="immediate_reallocation"/>
+                <element inactive_on_update="false" label="Roles Will Be Reduced" sequence="3" value="roles_will_be_reduced"/>
             </choice>
         </element>
-        <element attributes="html_sanitize=false" label="Proposed Architecture" max_length="8000" name="proposed_architecture" type="html"/>
-        <element label="What is the first time success rate of the task (%)" max_length="40" name="success_rate" type="integer"/>
-        <element label="Monthly Run Cost (£)" max_length="40" name="monthly_run_cost" type="currency"/>
+        <element label="GenAI Pre-Assessment Output" max_length="4000" name="ai_pre_assessment" type="html"/>
         <element choice="1" label="Decision Logic" max_length="40" name="decision_logic" type="choice">
             <choice>
                 <element inactive_on_update="false" label="Mostly Rules" sequence="2" value="mostly_rules"/>
@@ -86,50 +130,6 @@
                 <element inactive_on_update="false" label="Strict If/Then" sequence="1" value="strict_if_then"/>
             </choice>
         </element>
-        <element label="How is it currently fulfilled manually?" max_length="4000" name="current_fulfillment" type="string"/>
-        <element label="FTE Reduction" max_length="40" name="fte_reduction" type="integer"/>
-        <element label="Architect Notes / Findings" max_length="4000" name="architect_notes" type="string"/>
-        <element label="What is the average resource cost per hour? (£)" max_length="40" name="hourly_cost" type="currency"/>
-        <element label="What are the main pain points or bottlenecks?" max_length="4000" name="pain_points" type="string"/>
-        <element label="Year One Net ROI" max_length="40" name="year_one_net_roi" read_only="true" read_only_option="instance_configured" type="currency"/>
-        <element label="AI Suitability Score" max_length="40" name="ai_suitability_score" read_only="true" read_only_option="instance_configured" type="integer"/>
-        <element choice="1" label="Reallocation Strategy" max_length="40" name="reallocation_strategy" type="choice">
-            <choice>
-                <element inactive_on_update="false" label="Roles Will Be Reduced" sequence="3" value="roles_will_be_reduced"/>
-                <element inactive_on_update="false" label="Immediate Reallocation" sequence="1" value="immediate_reallocation"/>
-                <element inactive_on_update="false" label="Reskilling" sequence="2" value="reskilling"/>
-            </choice>
-        </element>
-        <element label="How much effort is required to complete this work (minutes)?" max_length="40" name="effort_minutes" type="integer"/>
-        <element choice="1" label="Final Decision" max_length="40" name="final_decision" type="choice">
-            <choice>
-                <element inactive_on_update="false" label="Not for AI Automation" value="no_go"/>
-                <element inactive_on_update="false" label="Go for Legacy Automation" value="go_legacy"/>
-                <element inactive_on_update="false" label="Go for AI Automation" value="go_ai"/>
-            </choice>
-        </element>
-        <element choice="1" label="Data Structure" max_length="40" name="data_structure" type="choice">
-            <choice>
-                <element inactive_on_update="false" label="Mixed" sequence="2" value="mixed"/>
-                <element inactive_on_update="false" label="Strictly Structured" sequence="1" value="strictly_structured"/>
-                <element inactive_on_update="false" label="Unstructured" sequence="3" value="unstructured"/>
-            </choice>
-        </element>
-        <element choice="1" label="Final Quadrant Decision" max_length="40" name="final_quadrant_decision" read_only="true" read_only_option="instance_configured" type="choice">
-            <choice>
-                <element inactive_on_update="false" label="R&amp;D Low Value" value="2"/>
-                <element inactive_on_update="false" label="AI Sweet Spot" value="1"/>
-                <element inactive_on_update="false" label="Legacy Auto" value="4"/>
-                <element inactive_on_update="false" label="Reject" value="3"/>
-            </choice>
-        </element>
-        <element label="What is the high-level objective of this process?" max_length="4000" name="process_objective" type="string"/>
-        <element attributes="html_sanitize=false" label="Current Architecture" max_length="8000" name="current_architecture" type="html"/>
         <element label="Contains PII / Confidential Data?" max_length="40" name="contains_pii" type="boolean"/>
-        <element label="Build Effort (£)" max_length="40" name="build_effort" type="currency"/>
-        <element label="How many tasks are completed annually?" max_length="40" name="annual_volume" type="integer"/>
-        <element label="Why do you believe AI is the right approach for this need?" max_length="4000" name="ai_rationale" type="string"/>
-        <element label="GenAI Pre-Assessment Output" max_length="4000" name="ai_pre_assessment" type="html"/>
-        <element label="Current Annual Cost" max_length="40" name="current_annual_cost" read_only="true" read_only_option="instance_configured" type="currency"/>
     </element>
 </database>

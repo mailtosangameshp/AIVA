@@ -1186,6 +1186,9 @@
                                                 "type": "JSON_LITERAL",
                                                 "value": null
                                             },
+                                            "overrides": {
+                                                "composition": []
+                                            },
                                             "preset": null,
                                             "propertyValues": {
                                                 "xAxis": {
@@ -1213,6 +1216,50 @@
                                             },
                                             "slot": null,
                                             "styles": null
+                                        },
+                                        {
+                                            "definition": {
+                                                "id": "df2a0ffd2fd347d49a7c679c9083e627",
+                                                "type": "MACROPONENT"
+                                            },
+                                            "elementId": "aiva_matrix_3",
+                                            "elementLabel": "AIVA Matrix 3",
+                                            "eventMappings": [],
+                                            "isHidden": {
+                                                "type": "JSON_LITERAL",
+                                                "value": null
+                                            },
+                                            "preset": null,
+                                            "propertyValues": {
+                                                "aiSuitabilityScore": {
+                                                    "binding": {
+                                                        "address": [
+                                                            "record",
+                                                            "form",
+                                                            "fields",
+                                                            "ai_suitability_score",
+                                                            "value"
+                                                        ]
+                                                    },
+                                                    "type": "DATA_OUTPUT_BINDING"
+                                                },
+                                                "proposalLabel": {
+                                                    "type": "JSON_LITERAL",
+                                                    "value": "Proposal Point"
+                                                },
+                                                "roiScore": {
+                                                    "script": {
+                                                        "apiVersion": "2.0.0",
+                                                        "controllerElementId": null,
+                                                        "inlineScript": null,
+                                                        "scriptSysId": "618e50ce836f8350ddec9e30ceaad341",
+                                                        "target": null
+                                                    },
+                                                    "type": "CLIENT_TRANSFORM_SCRIPT"
+                                                }
+                                            },
+                                            "slot": null,
+                                            "styles": null
                                         }
                                     ],
                                     "layout": {
@@ -1222,20 +1269,29 @@
                                                 {
                                                     "element_id": "aiva_matrix_chart_1",
                                                     "styles": {}
+                                                },
+                                                {
+                                                    "element_id": "aiva_matrix_3",
+                                                    "styles": {
+                                                        "align-self": "center",
+                                                        "background": "rgb(var(--now-color--neutral-1))",
+                                                        "height": "100%",
+                                                        "margin-top": "var(--now-scalable-space--xxs)",
+                                                        "padding": "var(--now-scalable-space--xs)",
+                                                        "padding-bottom": "0",
+                                                        "padding-left": "var(--now-scalable-space--xs)",
+                                                        "padding-right": "var(--now-scalable-space--xs)",
+                                                        "padding-top": "var(--now-scalable-space--xs)",
+                                                        "width": "75%"
+                                                    }
                                                 }
                                             ],
                                             "root": null,
                                             "rules": null,
                                             "styles": {
                                                 "background": "rgb(var(--now-color--neutral-1))",
-                                                "border-color": "RGB(var(--now-color--neutral-5))",
-                                                "border-radius": "var(--now-static-border-radius--md)",
-                                                "border-style": "solid",
-                                                "border-width": "var(--now-static-space--xxs)",
-                                                "box-shadow": "var(--now-static-drop-shadow--md)",
                                                 "display": "flex",
-                                                "flex-direction": "column",
-                                                "min-height": "300px"
+                                                "flex-direction": "column"
                                             },
                                             "templateId": "5832fd4d53c31010e6bcddeeff7b12db",
                                             "type": "flex"
@@ -1306,7 +1362,7 @@
                                             "eventMappings": [],
                                             "isHidden": {
                                                 "type": "JSON_LITERAL",
-                                                "value": null
+                                                "value": true
                                             },
                                             "preset": null,
                                             "propertyValues": {
@@ -1328,6 +1384,33 @@
                                         },
                                         {
                                             "definition": {
+                                                "id": "fdf281f0133226506f2b5701a61fba64",
+                                                "type": "MACROPONENT"
+                                            },
+                                            "elementId": "aiva_chat_2",
+                                            "elementLabel": "AIVA Chat 2",
+                                            "eventMappings": [],
+                                            "isHidden": {
+                                                "type": "JSON_LITERAL",
+                                                "value": null
+                                            },
+                                            "preset": null,
+                                            "propertyValues": {
+                                                "recordId": {
+                                                    "binding": {
+                                                        "address": [
+                                                            "record",
+                                                            "sysId"
+                                                        ]
+                                                    },
+                                                    "type": "DATA_OUTPUT_BINDING"
+                                                }
+                                            },
+                                            "slot": null,
+                                            "styles": null
+                                        },
+                                        {
+                                            "definition": {
                                                 "id": "8a4a190d344866a34e9a85d8dc4657d5",
                                                 "type": "MACROPONENT"
                                             },
@@ -1337,6 +1420,9 @@
                                             "isHidden": {
                                                 "type": "JSON_LITERAL",
                                                 "value": null
+                                            },
+                                            "overrides": {
+                                                "composition": []
                                             },
                                             "preset": null,
                                             "propertyValues": {
@@ -1364,6 +1450,12 @@
                                                         "overflow-wrap": "break-word",
                                                         "white-space": "normal",
                                                         "word-wrap": "break-word"
+                                                    }
+                                                },
+                                                {
+                                                    "element_id": "aiva_chat_2",
+                                                    "styles": {
+                                                        "width": "100%"
                                                     }
                                                 },
                                                 {
@@ -1484,14 +1576,14 @@
                                                 },
                                                 "height": {
                                                     "type": "JSON_LITERAL",
-                                                    "value": "1000"
+                                                    "value": "1200"
                                                 },
                                                 "src": {
                                                     "script": {
                                                         "apiVersion": "2.0.0",
                                                         "controllerElementId": null,
                                                         "inlineScript": null,
-                                                        "scriptSysId": "44345bc3937507100b617d532bba10c6",
+                                                        "scriptSysId": "cd96b09d83af0f10ddec9e30ceaad3fd",
                                                         "target": null
                                                     },
                                                     "type": "CLIENT_TRANSFORM_SCRIPT"
@@ -1506,7 +1598,7 @@
                                                 },
                                                 "width": {
                                                     "type": "JSON_LITERAL",
-                                                    "value": "820"
+                                                    "value": "900"
                                                 }
                                             },
                                             "slot": null,
@@ -1572,7 +1664,7 @@
                                                 },
                                                 "width": {
                                                     "type": "JSON_LITERAL",
-                                                    "value": "820"
+                                                    "value": "900"
                                                 }
                                             },
                                             "slot": null,
@@ -1600,7 +1692,8 @@
                                                 "grid-auto-columns": "1fr",
                                                 "grid-auto-rows": "1fr",
                                                 "grid-template-columns": "1fr 1fr",
-                                                "grid-template-rows": "1fr 1fr",
+                                                "grid-template-rows": "1fr",
+                                                "height": "100%",
                                                 "min-height": "300px",
                                                 "padding-left": "var(--now-scalable-space--md)",
                                                 "padding-right": "var(--now-scalable-space--md)",
@@ -5451,14 +5544,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2026-06-08 22:21:55</sys_created_on>
         <sys_id>fa397b49d2d941d7988ae201dc6db5a5</sys_id>
-        <sys_mod_count>89</sys_mod_count>
+        <sys_mod_count>118</sys_mod_count>
         <sys_name>Record Default</sys_name>
         <sys_package display_value="AIVA" source="x_168647_aiva">8b691e62935503100b617d532bba10d6</sys_package>
         <sys_policy/>
         <sys_scope display_value="AIVA">8b691e62935503100b617d532bba10d6</sys_scope>
         <sys_update_name>sys_ux_macroponent_fa397b49d2d941d7988ae201dc6db5a5</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-07-05 12:31:01</sys_updated_on>
+        <sys_updated_on>2026-09-27 17:25:57</sys_updated_on>
     </sys_ux_macroponent>
     <sys_translated_text action="delete_multiple" query="documentkey=fa397b49d2d941d7988ae201dc6db5a5"/>
 </record_update>

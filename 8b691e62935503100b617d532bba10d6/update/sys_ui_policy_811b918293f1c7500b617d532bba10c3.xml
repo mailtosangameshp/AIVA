@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_policy">
     <sys_ui_policy action="INSERT_OR_UPDATE">
-        <active>true</active>
+        <active>false</active>
         <conditions/>
         <description/>
         <global>true</global>
@@ -26,7 +26,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>811b918293f1c7500b617d532bba10c3</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_name>Hide Elements</sys_name>
         <sys_overrides/>
         <sys_package display_value="AIVA" source="x_168647_aiva">8b691e62935503100b617d532bba10d6</sys_package>
@@ -34,7 +34,7 @@
         <sys_scope display_value="AIVA">8b691e62935503100b617d532bba10d6</sys_scope>
         <sys_update_name>sys_ui_policy_811b918293f1c7500b617d532bba10c3</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-07-04 11:44:21</sys_updated_on>
+        <sys_updated_on>2026-09-24 12:42:59</sys_updated_on>
         <table>x_168647_aiva_request</table>
         <ui_type>0</ui_type>
         <view/>

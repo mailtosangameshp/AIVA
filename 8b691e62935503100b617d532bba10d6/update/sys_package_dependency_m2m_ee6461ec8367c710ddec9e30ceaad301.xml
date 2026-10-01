@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_package_dependency_m2m">
     <sys_package_dependency_m2m action="INSERT_OR_UPDATE">
-        <dependency display_value="System Import Sets" source="com.glide.system_import_set">17481675082003100a22e9371c04a4f3</dependency>
+        <dependency display_value="Task table schema" source="com.glide.task">d521b6f78c5103100a22deb6dd2b4e5d</dependency>
         <min_version>1.0.0</min_version>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2026-07-01 22:33:06</sys_created_on>
-        <sys_id>313c30c693bd87500b617d532bba10f2</sys_id>
+        <sys_created_on>2026-06-08 22:21:47</sys_created_on>
+        <sys_id>ee6461ec8367c710ddec9e30ceaad301</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_package display_value="AIVA" source="x_168647_aiva">8b691e62935503100b617d532bba10d6</sys_package>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-07-01 22:33:06</sys_updated_on>
+        <sys_updated_on>2026-06-08 22:21:47</sys_updated_on>
     </sys_package_dependency_m2m>
 </record_update>

@@ -99,13 +99,13 @@
 
     // AIVA-specific overrides. Safe fallbacks for initial load.
     data.table = (isInput && input.table) || (isOptions && options.table) || 'x_168647_aiva_request';
-    data.filter = (isInput && input.filter) || (isOptions && options.filter) || 'opened_byDYNAMIC90d1921e5f510100a9ad2572f2b477fe'; 
+    data.filter = (isInput && input.filter) || (isOptions && options.filter) || 'opened_byDYNAMIC90d1921e5f510100a9ad2572f2b477fe';
     data.fields = (isInput && input.fields) || (isOptions && options.fields) || 'number,short_description,opened_at,annual_volume,state';
 
     // Core variables
     data.p = data.p || (isInput && input.p) || 1;
     data.p = parseInt(data.p);
-    data.o = data.o || (isInput && input.o) || 'sys_created_on'; 
+    data.o = data.o || (isInput && input.o) || 'sys_created_on';
     data.d = data.d || (isInput && input.d) || 'desc';
 
     var windowSize = data.window_size || (isOptions && options.window_size) || 10;
@@ -115,7 +115,7 @@
 
     var grForMetaData = new GlideRecord(data.table);
     var gr;
-    
+
     // Apply read security
     if (typeof FilteredGlideRecord != "undefined" && (gs.getProperty("glide.security.ui.filter") == "true" || grForMetaData.getAttribute("glide.security.ui.filter") != null)) {
         gr = new FilteredGlideRecord(data.table);
@@ -123,8 +123,10 @@
     } else {
         gr = new GlideRecordSecure(data.table);
     }
-    
-    if (!gr.isValid()) { return; }
+
+    if (!gr.isValid()) {
+        return;
+    }
 
     if (data.filter) {
         gr.addEncodedQuery(data.filter);
@@ -149,26 +151,87 @@
     data.fields_array = data.fields.split(',');
 
     // Populate Dictionary Labels
+    /*  for (var i in data.fields_array) {
+          var field = data.fields_array[i];
+          var ge = grForMetaData.getElement(field);
+          if (ge == null) continue;
+
+          var compositeElement = new GlideCompositeElement(field, data.table);
+          if (!compositeElement.isSimple()) {
+              data.column_labels[field] = compositeElement.getDisplayLabel();
+          } else {
+              data.column_labels[field] = ge.getLabel();
+          }
+          data.column_types[field] = ge.getED().getInternalType();
+      } */
+
+    /////
+
+
     for (var i in data.fields_array) {
         var field = data.fields_array[i];
-        var ge = grForMetaData.getElement(field);
-        if (ge == null) continue;
 
-        var compositeElement = new GlideCompositeElement(field, data.table);
-        if (!compositeElement.isSimple()) {
-            data.column_labels[field] = compositeElement.getDisplayLabel();
-        } else {
+        if (!field)
+            continue;
+
+        var ge = grForMetaData.getElement(field);
+
+        if (ge) {
             data.column_labels[field] = ge.getLabel();
+            data.column_types[field] = ge.getED().getInternalType();
+            continue;
         }
-        data.column_types[field] = ge.getED().getInternalType();
+
+        // Handle dot-walked fields such as caller_id.name
+        if (field.indexOf('.') > -1) {
+            var parts = field.split('.');
+            var currentGR = grForMetaData;
+            var valid = true;
+            var label = '';
+            var element = null;
+
+            for (var j = 0; j < parts.length; j++) {
+                element = currentGR.getElement(parts[j]);
+
+                if (!element) {
+                    valid = false;
+                    break;
+                }
+
+                label = element.getLabel();
+
+                if (j < parts.length - 1) {
+                    var referenceTable = element.getReference();
+
+                    if (!referenceTable) {
+                        valid = false;
+                        break;
+                    }
+
+                    currentGR = new GlideRecord(referenceTable);
+
+                    if (!currentGR.isValid()) {
+                        valid = false;
+                        break;
+                    }
+                }
+            }
+
+            if (valid && element) {
+                data.column_labels[field] = label;
+                data.column_types[field] = element.getED().getInternalType();
+            }
+        }
     }
+
+    //////
 
     // Populate Data
     data.list = [];
     while (gr._next()) {
         var record = {};
         $sp.getRecordElements(record, gr, data.fields);
-        
+
         // Take care of field-level ACLs for FilteredGlideRecord
         if (typeof FilteredGlideRecord != "undefined" && gr instanceof FilteredGlideRecord) {
             for (var f in data.fields_array) {
@@ -189,14 +252,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2026-06-08 23:26:44</sys_created_on>
         <sys_id>4c1ac18cdb62449f9534308272ac2c2c</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_name>AIVA Request List</sys_name>
         <sys_package display_value="AIVA" source="x_168647_aiva">8b691e62935503100b617d532bba10d6</sys_package>
         <sys_policy/>
         <sys_scope display_value="AIVA">8b691e62935503100b617d532bba10d6</sys_scope>
         <sys_update_name>sp_widget_4c1ac18cdb62449f9534308272ac2c2c</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-07-03 21:53:06</sys_updated_on>
+        <sys_updated_on>2026-09-24 10:29:51</sys_updated_on>
         <template><![CDATA[<div class="aiva-list-container">
   <div class="aiva-header-bar">
     <div class="aiva-title">

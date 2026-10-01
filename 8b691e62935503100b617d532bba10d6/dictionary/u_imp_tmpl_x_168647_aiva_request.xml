@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element attributes="enforce_dot_walk_cross_scope_access=true" db_object_id="d1add86a83af8750ddec9e30ceaad361" extends="sys_import_set_row" label="Imp Tmpl X 168647 Aiva Request" max_length="40" name="u_imp_tmpl_x_168647_aiva_request" type="collection">
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Description" label="Description" max_length="4000" name="u_description" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=What is the high-level objective of this process?" label="What is the high-level objective of this process?" max_length="4000" name="u_what_is_the___this_process_" type="string"/>
+        <element attributes="import_attribute_name=What is the first time success rate of the task (%)" label="What is the first time success rate of the task (%)" max_length="40" name="u_what_is_the__f_the_task____" type="integer"/>
+        <element attributes="import_attribute_name=FTE Reduction" label="FTE Reduction" max_length="38" name="u_fte_reduction" type="decimal"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Contains PII / Confidential Data?" label="Contains PII / Confidential Data?" max_length="40" name="u_contains_pii_idential_data_" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Task type" label="Task type" max_length="80" name="u_task_type" type="string"/>
+        <element attributes="import_attribute_name=Expected Automation Resolution Rate (%)" label="Expected Automation Resolution Rate (%)" max_length="40" name="u_expected_aut_ution_rate____" type="integer"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=How much human judgement is currently required in this process?" label="How much human judgement is currently required in this process?" max_length="40" name="u_how_much_hum__this_process_" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Workforce Impact" label="Workforce Impact" max_length="40" name="u_workforce_impact" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Why do you believe AI is the right approach for this need?" label="Why do you believe AI is the right approach for this need?" max_length="4000" name="u_why_do_you_b_for_this_need_" type="string"/>
+        <element attributes="import_attribute_name=Build Effort (£)" label="Build Effort (£)" max_length="38" name="u_build_effort____" type="integer"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Decision Logic" label="Decision Logic" max_length="40" name="u_decision_logic" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Current Architecture" label="Current Architecture" max_length="8000" name="u_current_architecture" type="string"/>
+        <element attributes="import_attribute_name=Reassignment count" label="Reassignment count" max_length="40" name="u_reassignment_count" type="integer"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Reallocation Strategy" label="Reallocation Strategy" max_length="40" name="u_reallocation_strategy" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Data Structure" label="Data Structure" max_length="40" name="u_data_structure" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Architect Notes / Findings" label="Architect Notes / Findings" max_length="4000" name="u_architect_notes___findings" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=How is it currently fulfilled manually?" label="How is it currently fulfilled manually?" max_length="4000" name="u_how_is_it_cu_lled_manually_" type="string"/>
+        <element attributes="import_attribute_name=How much effort is required to complete this work (minutes)?" label="How much effort is required to complete this work (minutes)?" max_length="40" name="u_how_much_eff_ork__minutes__" type="integer"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Short description" label="Short description" max_length="160" name="u_short_description" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=What would you expect the AI solution to help with?" label="What would you expect the AI solution to help with?" max_length="40" name="u_what_would_y__to_help_with_" type="string"/>
+        <element attributes="import_attribute_name=What is the average resource cost per hour? (£)" label="What is the average resource cost per hour? (£)" max_length="38" name="u_what_is_the___per_hour_____" type="integer"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=What are the main pain points or bottlenecks?" label="What are the main pain points or bottlenecks?" max_length="4000" name="u_what_are_the_r_bottlenecks_" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=GenAI Pre-Assessment Output" label="GenAI Pre-Assessment Output" max_length="4000" name="u_genai_pre_assessment_output" type="string"/>
+        <element attributes="import_attribute_name=How many tasks are completed annually?" label="How many tasks are completed annually?" max_length="40" name="u_how_many_tas_eted_annually_" type="integer"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Number" label="Number" max_length="40" name="u_number" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Proposed Architecture" label="Proposed Architecture" max_length="8000" name="u_proposed_architecture" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Final Decision" label="Final Decision" max_length="40" name="u_final_decision" type="string"/>
+    </element>
+</database>

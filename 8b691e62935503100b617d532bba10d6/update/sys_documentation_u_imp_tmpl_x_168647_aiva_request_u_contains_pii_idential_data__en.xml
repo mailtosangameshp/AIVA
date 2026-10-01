@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="u_contains_pii_idential_data_" label="Contains PII / Confidential Data?" language="en" table="u_imp_tmpl_x_168647_aiva_request">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>u_contains_pii_idential_data_</element>
+            <help/>
+            <hint/>
+            <label>Contains PII / Confidential Data?</label>
+            <language>en</language>
+            <name>u_imp_tmpl_x_168647_aiva_request</name>
+            <plural>Contains PII / Confidential Data?s</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-09-28 09:26:23</sys_created_on>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Contains PII / Confidential Data?</sys_name>
+            <sys_package display_value="AIVA" source="x_168647_aiva">8b691e62935503100b617d532bba10d6</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="AIVA">8b691e62935503100b617d532bba10d6</sys_scope>
+            <sys_update_name>sys_documentation_u_imp_tmpl_x_168647_aiva_request_u_contains_pii_idential_data__en</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-09-28 09:26:23</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

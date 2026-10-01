@@ -33,7 +33,7 @@
         <short_description/>
         <size>md</size>
         <sp_column display_value="1">82663b5b1d8346ca8d3f8e67e5f242a9</sp_column>
-        <sp_widget display_value="AIVA Request List Global">ff96cfea937103100b617d532bba10be</sp_widget>
+        <sp_widget display_value="">ff96cfea937103100b617d532bba10be</sp_widget>
         <sys_class_name>sp_instance</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2026-07-03 21:56:07</sys_created_on>

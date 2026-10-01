@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_page">
+    <sys_ui_page action="INSERT_OR_UPDATE">
+        <category>general</category>
+        <client_script/>
+        <description/>
+        <direct>false</direct>
+        <endpoint>x_168647_aiva_prop_ark.do</endpoint>
+        <html><![CDATA[<?xml version="1.0" encoding="utf-8" ?>
+<j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide">
+  <g:evaluate var="jvar_html" jelly="true">
+    var html = '';
+    var gr = new GlideRecord('x_168647_aiva_request');
+  if (gr.get(RP.getParameterValue('sysparm_sys_id'))) {
+      html = gr.getValue('proposed_architecture') || '';
+
+      // strip markdown fences if the AI added them
+      html = html.replace(/^\s*```(?:html)?\s*/i, '').replace(/\s*```\s*$/, '');
+
+      // convert HTML-only entities  (paste it here)
+      html = html.replace(/&amp;mdash;/g, '&#8212;')
+                 .replace(/&amp;nbsp;/g, '&#160;')
+                 .replace(/&amp;rarr;/g, '&#8594;')
+                 .replace(/&amp;bull;/g, '&#8226;');
+    }
+    html;
+  </g:evaluate>
+  <html>
+    <head><meta charset="UTF-8"/></head>
+    <body><g:no_escape>${jvar_html}</g:no_escape></body>
+  </html>
+</j:jelly>]]></html>
+        <name>prop_ark</name>
+        <processing_script/>
+        <sys_class_name>sys_ui_page</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-24 14:15:19</sys_created_on>
+        <sys_id>7e69341983ef0f10ddec9e30ceaad385</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>prop_ark</sys_name>
+        <sys_package display_value="AIVA" source="x_168647_aiva">8b691e62935503100b617d532bba10d6</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AIVA">8b691e62935503100b617d532bba10d6</sys_scope>
+        <sys_update_name>sys_ui_page_7e69341983ef0f10ddec9e30ceaad385</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-24 14:15:47</sys_updated_on>
+    </sys_ui_page>
+</record_update>

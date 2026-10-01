@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ws_operation">
+    <sys_ws_operation action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <consumes>application/json,application/xml,text/xml</consumes>
+        <consumes_customized>false</consumes_customized>
+        <default_operation_uri/>
+        <enforce_acl/>
+        <http_method>POST</http_method>
+        <name>Post AIVA Chat</name>
+        <operation_script><![CDATA[(function process( /*RESTAPIRequest*/ request, /*RESTAPIResponse*/ response) {
+
+    var recordId = request.pathParams.record_id;
+    var body = request.body.data || {};
+    var message = body.message;
+
+    var requestDebugInfo = {
+        "url_endpoint": request.url,
+        "http_method": request.queryString ? "GET/PARAMS" : "POST/PUT",
+        "path_parameters": request.pathParams,
+        "query_parameters": request.queryParams,
+        "headers": request.headers,
+        "raw_body_string": request.body.dataString, // Complete raw input payload
+        "parsed_body_json": body
+    };
+
+    // This logs everything into System Logs > App Logs
+    gs.info('AIVA Request Debug Log:\n' + JSON.stringify(requestDebugInfo, null, 4));
+
+    if (!message) {
+        response.setStatus(400);
+        return {
+            error: 'message is required'
+        };
+    }
+
+
+    var aiva = new AIVAGenAIAssistant();
+    // body.model is captured here for when you wire up multi-model routing
+    // (see README) — processChat doesn't use it yet.
+    var reply = aiva.processChat(recordId, message);
+
+    if (reply && (reply.indexOf('Error:') === 0 || reply.indexOf('Exception:') === 0)) {
+        response.setStatus(502);
+        return {
+            error: reply
+        };
+    }
+
+    response.setStatus(200);
+    return {
+        recordId: recordId,
+        reply: reply
+    };
+})(request, response);]]></operation_script>
+        <operation_uri>/api/x_168647_aiva/x_168647_aiva_chat/chat/{record_id}/send</operation_uri>
+        <produces>application/json,application/xml,text/xml</produces>
+        <produces_customized>false</produces_customized>
+        <relative_path>/chat/{record_id}/send</relative_path>
+        <request_example/>
+        <requires_acl_authorization>true</requires_acl_authorization>
+        <requires_authentication>false</requires_authentication>
+        <requires_snc_internal_role>true</requires_snc_internal_role>
+        <short_description/>
+        <support_trailing_slash>false</support_trailing_slash>
+        <sys_class_name>sys_ws_operation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-27 08:32:24</sys_created_on>
+        <sys_id>95478fc27323035017b1fb914ab8b765</sys_id>
+        <sys_mod_count>16</sys_mod_count>
+        <sys_name>Post AIVA Chat</sys_name>
+        <sys_package display_value="AIVA" source="x_168647_aiva">8b691e62935503100b617d532bba10d6</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AIVA">8b691e62935503100b617d532bba10d6</sys_scope>
+        <sys_update_name>sys_ws_operation_95478fc27323035017b1fb914ab8b765</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-27 16:19:54</sys_updated_on>
+        <web_service_definition display_value="AIVA Chat API">8ad3474e73efcf1017b1fb914ab8b7a9</web_service_definition>
+        <web_service_version/>
+    </sys_ws_operation>
+</record_update>

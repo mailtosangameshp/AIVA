@@ -9,7 +9,7 @@
         <edit_locked/>
         <enable_data_cache>false</enable_data_cache>
         <include_custom_insights>true</include_custom_insights>
-        <include_insight_sentiment>false</include_insight_sentiment>
+        <include_insight_sentiment>true</include_insight_sentiment>
         <include_key_contributors>true</include_key_contributors>
         <include_kpi_signals>true</include_kpi_signals>
         <include_predictive_target>true</include_predictive_target>
@@ -21,13 +21,14 @@
         <include_trends>true</include_trends>
         <include_widget_notification>true</include_widget_notification>
         <last_deactivated_on/>
-        <last_updated_on>2026-07-02 01:24:38</last_updated_on>
-        <po_project_id_list>[]</po_project_id_list>
+        <last_updated_on/>
+        <po_project_id_list/>
         <refresh_information>false</refresh_information>
-        <refresh_interval>-1</refresh_interval>
+        <refresh_interval/>
         <requested_by_user/>
         <schedule_repetition>false</schedule_repetition>
-        <show_ai_insights_panel>false</show_ai_insights_panel>
+        <show_ai_insights_panel>true</show_ai_insights_panel>
+        <show_ai_summary>false</show_ai_summary>
         <show_insights_panel>true</show_insights_panel>
         <sys_class_name>par_dashboard_user_metadata</sys_class_name>
         <sys_created_by>admin</sys_created_by>
@@ -35,7 +36,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>7222eecb936103100b617d532bba10e1</sys_id>
-        <sys_mod_count>77</sys_mod_count>
+        <sys_mod_count>0</sys_mod_count>
         <sys_name/>
         <sys_overrides/>
         <sys_package display_value="AIVA" source="x_168647_aiva">8b691e62935503100b617d532bba10d6</sys_package>
@@ -43,8 +44,8 @@
         <sys_scope display_value="AIVA">8b691e62935503100b617d532bba10d6</sys_scope>
         <sys_update_name>par_dashboard_user_metadata_7222eecb936103100b617d532bba10e1</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-07-04 10:18:31</sys_updated_on>
-        <updated_by_user display_value="System Administrator">6816f79cc0a8016401c5a33be04be441</updated_by_user>
+        <sys_updated_on>2026-06-22 22:16:47</sys_updated_on>
+        <updated_by_user/>
         <use_custom_tab_colors>false</use_custom_tab_colors>
         <widgets_margin>$now-global-space--sm</widgets_margin>
     </par_dashboard_user_metadata>
